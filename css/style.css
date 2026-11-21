@@ -1,0 +1,61 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor {
+    width: 450px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.cuadro {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 15px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+textarea {
+    width: 100%;
+    height: 75px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+textarea::placeholder {
+    color: rgb(170, 170, 170);
+}
+
+#contador {
+    text-align: right;
+    font-size: 14px;
+    color: black;
+}
+
+.cuadro:has(textarea.borde-rojo) {
+    border: 2px solid red;
+}
+
+textarea.borde-rojo + #contador {
+    color: red;
+}
